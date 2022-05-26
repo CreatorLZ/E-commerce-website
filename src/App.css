@@ -5,6 +5,12 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  size: 5px;
+  border-color: rgba(241, 235, 235, 0.993);
+  border-width: 5px;
+  object-fit: cover;
+  transition: all ;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
