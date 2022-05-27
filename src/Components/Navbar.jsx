@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from '@material-ui/core';
-
+import {mobile} from "../Responsive"
 const Container = styled.div`
-height: 60px
+height: 60px;
+${mobile({ backgroundColor: "red" })}
 `
 
 const Wrapper = styled.div`
