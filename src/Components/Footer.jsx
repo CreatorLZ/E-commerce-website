@@ -1,4 +1,4 @@
-import { Facebook, Instagram, MailOutline, MyLocation, Phone, Twitter } from '@material-ui/icons'
+import { Facebook, Instagram, MailOutline, MyLocation, Phone, StoreRounded, Twitter } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -72,7 +72,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>Across</Logo>
+      <Logo>Across <StoreRounded /> </Logo>
         <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Quae facilis saepe beatae, assumenda numquam officia perferendis do
              loribus atque quisquam, magni natus incidunt temporibus nulla repudianda
