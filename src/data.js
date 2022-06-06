@@ -32,21 +32,24 @@ export const categories = [
     {
         id: 1,
         img: "https://media.istockphoto.com/photos/beautiful-mixes-race-woman-holding-shopping-bags-and-smiling-picture-id1063212632?k=20&m=1063212632&s=612x612&w=0&h=mEojmLxZFVTWExMnQkMJWj5pHqU-SPk_uMBw6Z_lP4o=",
-        title: "LIGHT JACKETS"
+        title: "LIGHT JACKETS",
+        cat: "women"
     },
 
     
     {
         id: 2,
         img: "https://media.istockphoto.com/photos/beautiful-mixes-race-woman-holding-shopping-bags-and-smiling-picture-id1063212632?k=20&m=1063212632&s=612x612&w=0&h=mEojmLxZFVTWExMnQkMJWj5pHqU-SPk_uMBw6Z_lP4o=",
-        title: "SHIRTS"
+        title: "SHIRTS",
+        cat: "shirts"
     },
 
     
     {
         id: 3,
         img: "https://media.istockphoto.com/photos/beautiful-mixes-race-woman-holding-shopping-bags-and-smiling-picture-id1063212632?k=20&m=1063212632&s=612x612&w=0&h=mEojmLxZFVTWExMnQkMJWj5pHqU-SPk_uMBw6Z_lP4o=",
-        title: "LOUNGWEAR LOVE"
+        title: "LOUNGWEAR LOVE",
+        cat : "jeans"
     }
 ]
 

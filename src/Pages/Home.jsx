@@ -10,7 +10,7 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-background-color: #95b7d3;
+background-color: #7595af;
 `
 
 const Home = () => {
