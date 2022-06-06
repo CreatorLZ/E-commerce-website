@@ -6,7 +6,7 @@ export const sliderItems = [
     img:"https://www.pngall.com/wp-content/uploads/5/Attractive-Model-Man-Transparent.png",
     title: "JEANS SALE",
     Description: "DONT COMPROMISE ON STYLE! GET 30% OFF ON NEW ARRIVALS.",
-    bg: "white",
+    bg: "rgba(241, 235, 235, 0.993);",
 },
 
 {

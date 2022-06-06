@@ -6,10 +6,17 @@ import Navbar from '../Components/Navbar'
 import Newsletter from '../Components/Newsletter'
 import Products from '../Components/Products'
 import Slider from '../Components/Slider'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+background-color: #95b7d3;
+`
 
 const Home = () => {
   return (
     <div>
+      <Container>
       <Announcements/>
      <Navbar />
      <Slider />
@@ -17,6 +24,7 @@ const Home = () => {
      <Products />
      <Newsletter />
      <Footer />
+      </Container>
     </div>
   )
 }

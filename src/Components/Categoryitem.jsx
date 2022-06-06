@@ -41,7 +41,7 @@ transition: all 0.5s ease;
 &:hover {
   background-color: gold;
   transform: scale(1.1);
-`
+}`
 
 const Categoryitem = ({item}) => {
   return (

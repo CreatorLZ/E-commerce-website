@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { HowToRegOutlined, PersonOutline, ShoppingCartOutlined, StoreRounded } from "@material-ui/icons";
 import { Badge } from '@material-ui/core';
-import {mobile} from "../Responsive"
+import {mobile} from "../responsive"
 
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ cursor: pointer;
 `
 
 const SearchContainer = styled.div`
-border: 1.5px solid lightgray;
+border: none;
 display: flex;
 align-items: center;
 margin-left: 25px;
@@ -44,10 +44,11 @@ border-radius: 5px;
 
 
 const Input  = styled.input`
-border: none;
+border: 1.5px solid lightgray;
 flex:9;
 padding: 10px;
 width: 80vh;
+border-radius: 5px;
 `
 
 
@@ -91,6 +92,7 @@ cursor: pointer;
 flex: 1;
 padding: 10px;
 margin-left: 3px;
+border-radius: 5px;
 
 `
 
