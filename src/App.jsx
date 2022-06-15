@@ -12,7 +12,7 @@ const App = () => {
   const user = null;
   return (
     <Routes>
-    <Route path="/NEW-APP" exact={true} element={<Home />} />
+    <Route path="/" exact={true} element={<Home />} />
 
     <Route path="login" element={user ? <Navigate to="/" /> : <Login />} />;
 
