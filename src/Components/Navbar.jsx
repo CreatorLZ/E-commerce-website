@@ -3,11 +3,15 @@ import styled from 'styled-components';
 import { HowToRegOutlined, PersonOutline, ShoppingCartOutlined, StoreRounded } from "@material-ui/icons";
 import { Badge } from '@material-ui/core';
 import {mobile} from "../responsive"
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 const Container = styled.div`
 height: 60px;
 ${mobile({ backgroundColor: "red" })};
+margin-bottom: 10px;
+background-color: #001747;
 margin-bottom: 10px;
 `
 
@@ -28,7 +32,7 @@ margin: 10px;
 const Language = styled.span`
 font-size: 14px; 
 cursor: pointer;
-
+color: white;
 `
 
 const SearchContainer = styled.div`
@@ -65,9 +69,10 @@ const Right = styled.div`
 flex: 1;
 display: flex;
 align-items: center;
-justify-content: flex-end;`
+justify-content: flex-end;
+color: white;
+`
 
-;
 
 const MenuItem = styled.div`
 font-size: 14px;
@@ -81,12 +86,14 @@ font-weight: 500;
 const Logo = styled.h1`
 font-weight: bold ;
 font-size: 280%;
+color: white;
+margin-right: 100px;
 `
 
 const Button = styled.button`
 color: white;
 font-size: 18px;
-background-color: teal;
+background-color: #DEBA50;
 border: none;
 cursor: pointer;
 flex: 1;
@@ -98,11 +105,15 @@ border-radius: 5px;
 
 
 const Navbar = () => {
+  const quantity = useSelector(state=>state.cart.quantity)
+
+ 
+
   return (
     <Container>
      <Wrapper>
      <Left>
-     <Logo>Across <StoreRounded /> </Logo>
+     <Logo>Across <StoreRounded style={{margin: "none"}} /> </Logo>
        </Left>
      <Center><Language>EN</Language>
        <SearchContainer>
@@ -114,11 +125,13 @@ const Navbar = () => {
      <Right>
        <MenuItem> <HowToRegOutlined style={{fontSize: "large"}} /> REGISTER</MenuItem>
        <MenuItem> <PersonOutline style={{fontSize: "large"}} /> SIGN IN</MenuItem>
+       <Link to = "/cart">
        <MenuItem>
-       <Badge badgeContent={4} color="primary">
+       <Badge badgeContent={quantity} color="primary">
   <ShoppingCartOutlined />
 </Badge>
        </MenuItem>
+        </Link>
      </Right>
      </Wrapper>
     </Container>

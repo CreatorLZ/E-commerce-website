@@ -5,15 +5,24 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-flex: 1;
-margin: 3px;
-height: 70vh;
+flex:1;
+margin: 10px;
+margin-bottom: 0px;
+min-width: 280px;
+height: 350px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgba(241, 235, 235, 0.993);
+-webkit-border-radius: 15px;
+border-radius: 15px;
 position: relative;
+margin-bottom: 60px;
 `
 const Image = styled.img`
-width: 100%;
-height: 100%;
-object-fit: cover;
+width: 410px;
+  height: 320px;
+  object-fit: cover;
 `
 const Info = styled.div`
 position: absolute;
@@ -25,6 +34,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+
 `
 const Title = styled.h1`
 color: white;
@@ -32,8 +42,8 @@ margin-bottom: 20px;
 `
 const Button = styled.button`
 border: none;
-padding: 10px;
-background-color: white;
+padding: 5px;
+background-color:rgba(255, 255, 255, 0.5);
 color: gray;
 cursor: pointer;
 font-weight: 600;

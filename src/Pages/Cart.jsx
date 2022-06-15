@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from '../Components/Navbar'
-import Announcements from '../Components/Announcements'
 import Footer from '../Components/Footer'
 import { Add, Remove } from '@material-ui/icons'
+import {useSelector} from "react-redux"
+import StripeCheckout from 'react-stripe-checkout'
 
 const Container = styled.div`
-
+background-color: #001747;
 `;
 
 const Wrapper = styled.div`
  padding: 20px;
+ background-color: white;
 `;
 
 const Title = styled.h1`
@@ -23,7 +25,7 @@ padding: 10px;
 font-weight: 600;
 cursor: pointer;
 border: ${props => props.type === "filled" && "none"};
-background-color: ${props => props.type === "filled" ? "black" : "transparent"};
+background-color: ${props => props.type === "filled" ? "#001747" : "transparent"};
 color: ${props => props.type === "filled" && "white"};
 
 `;
@@ -150,16 +152,17 @@ const SummaryItemPrice = styled.span`
 const Button = styled.button`
 width: 100%;
 padding: 10px;
-background-color: black;
+background-color: #001747;
 color: white;
 font-weight: 600;
 `;
 
 const Cart = () => {
+  const cart = useSelector(state=>state.cart)
+
   return (
     <Container>
       <Navbar />
-      <Announcements />
       <Wrapper>
           <Title>YOUR BAG</Title>
           <Top>
@@ -173,49 +176,33 @@ const Cart = () => {
           </Top>
           <Bottom>
             <Info>
-              <Product>
+              {cart.products.map(product=>(
+
+                <Product>
                 <ProductDetail>
-                  <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFfxUhdFDO_8bcfMDDGC-0bwpyof9HAh0rWg&usqp=CAU' />
+                  <Image src= {product.img} />
                   <Details>
-                    <ProductName><b>Product:</b> SWORD OF TRUTH</ProductName>
-                    <ProductId><b>ID:</b> 456377778</ProductId>
-                    <ProductColor color='black' />
-                    <ProductSize><b>Size:</b> 6ft</ProductSize>
+                    <ProductName><b>Product:</b> {product.title}</ProductName>
+                    <ProductId><b>ID:</b>{product._id}</ProductId>
+                    <ProductColor color={product.color} />
+                    <ProductSize><b>Size:</b> {product.size}</ProductSize>
 
                   </Details>
                 </ProductDetail>
                 <PriceDetail>
                   <ProductAmountContainer>
                     <Add />
-                    <ProductAmount>2</ProductAmount>
+                    <ProductAmount>{product.quantity}</ProductAmount>
                     <Remove />
                   </ProductAmountContainer>
-                  <ProductPrice>N25,000</ProductPrice>
+                  <ProductPrice><span>&#8358;</span>{product.price* product.quantity}</ProductPrice>
                 </PriceDetail>
               </Product>
+                ))}
 
-              <Hr />
+              
 
-              <Product>
-                <ProductDetail>
-                  <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFfxUhdFDO_8bcfMDDGC-0bwpyof9HAh0rWg&usqp=CAU' />
-                  <Details>
-                    <ProductName><b>Product:</b> SWORD OF TRUTH</ProductName>
-                    <ProductId><b>ID:</b> 456377778</ProductId>
-                    <ProductColor color='black' />
-                    <ProductSize><b>Size:</b> 6ft</ProductSize>
-
-                  </Details>
-                </ProductDetail>
-                <PriceDetail>
-                  <ProductAmountContainer>
-                    <Add />
-                    <ProductAmount>2</ProductAmount>
-                    <Remove />
-                  </ProductAmountContainer>
-                  <ProductPrice>N25,000</ProductPrice>
-                </PriceDetail>
-              </Product>
+             
 
             </Info>
             <Summary>
@@ -237,7 +224,7 @@ const Cart = () => {
 
               <SummaryItem type = 'total'>
                 <SummaryItemText>Total</SummaryItemText>
-                <SummaryItemPrice>N25,000</SummaryItemPrice>
+                <SummaryItemPrice><span>&#8358;</span>{cart.total}</SummaryItemPrice>
               </SummaryItem>
               <Button>CHECKOUT NOW</Button>
 

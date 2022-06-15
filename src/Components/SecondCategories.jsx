@@ -1,30 +1,31 @@
-import React from 'react';
+import React from 'react'
 import styled from "styled-components";
-import { categories } from "../data";
+import { secondCategories } from "../data";
 import { mobile } from "../responsive";
 import Categoryitem from "./Categoryitem";
 
 
 
 const Container = styled.div`
+
   display: flex;
-  padding: 20px;
+  padding: 5px;
   justify-content: space-between;
   ${mobile({ padding: "0px", flexDirection:"column" })};
   background-color: white;
-  
+  margin-top: none;
 
 
 `;
 
-const Categories = () => {
+const SecondCategories = () => {
   return (
     <Container>
-      {categories.map((item) => (
+      {secondCategories.map((item) => (
         <Categoryitem item={item} key={item.id} />
       ))}
     </Container>
   );
 };
 
-export default Categories;
+export default SecondCategories;

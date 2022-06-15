@@ -83,7 +83,7 @@ background-color: transparent;
 
 transition: all 0.5s ease;
 &:hover {
-  background-color: rgba(241, 235, 235, 0.993);
+  background-color: rgb(241, 234, 224);
   transform: scale(1.1);
 }
   `

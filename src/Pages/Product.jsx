@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from "../Components/Navbar"
-import Announcements from '../Components/Announcements'
 import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
 import { Add, Remove } from '@material-ui/icons'
@@ -107,7 +106,6 @@ const Product = () => {
   return (
     <Container>
     <Navbar />
-    <Announcements />
     <Wrapper>
         <ImgContainer>
         <Image src= "https://toppng.com/uploads/preview/loose-jumper-sweater-11564231946tkirq5ym49.png" />
