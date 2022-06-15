@@ -8,11 +8,12 @@ import { Add, Remove } from '@material-ui/icons'
 
 
 const Container = styled.div`
-
+background-color: #001747;
 `
 const Wrapper = styled.div`
 padding: 50px;
 display: flex;
+background-color: white;
 `;
 
 const ImgContainer = styled.div`
