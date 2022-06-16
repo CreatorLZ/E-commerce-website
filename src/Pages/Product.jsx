@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Navbar from "../Components/Navbar"
 import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
 import { Add, Remove } from '@material-ui/icons'
+import { useLocation } from 'react-router-dom'
+import axios from 'axios';
 
 
 
@@ -104,28 +106,39 @@ font-weight: 500;
 `
 
 const Product = () => {
-  return (
-    <Container>
-    <Navbar />
-    <Wrapper>
-        <ImgContainer>
-        <Image src= "https://toppng.com/uploads/preview/loose-jumper-sweater-11564231946tkirq5ym49.png" />
-        </ImgContainer>
-        <InfoContainer>
-            <Title>Sweat shirt</Title>
-            <Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur 
-                quas sed ratione cumque magni sapiente amet odio eaque 
-                expedita ad animi ex repellat deserunt, cupiditate
-                 rerum quidem nihil, excepturi quod?</Description>
-            <Price><span>&#8358;</span>6000</Price>
-            <FilterContainer>
-                <Filter>
-                    <FilterTitle>Color</FilterTitle>
-                    <FilterColor color = "black"/>
-                    <FilterColor color = "blue"/>
-                    <FilterColor color="gray"/>
-                </Filter>
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
 
+    const [product, setProduct] = useState({});
+
+    useEffect(()=>{
+        const getProduct = async()=> {
+            try{
+                const res = await axios.get("http://localhost:5000/api/products/find/"+ id);
+                setProduct(res.data);
+            }catch{} 
+              
+        };
+        getProduct()
+    }, [id]);
+    return (
+        <Container>
+          <Navbar />
+          <Wrapper>
+            <ImgContainer>
+              <Image src={product.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{product.title}</Title>
+              <Description>{product.desc}</Description>
+              <Price>&#8358;{product.price}</Price>
+              <FilterContainer>
+              <Filter>
+                    <FilterTitle>Color</FilterTitle>
+                    {product.color.map((c) => (
+                  <FilterColor color={c} key={c} />
+              ))}
+                </Filter>
                 <Filter>
                     <FilterTitle>Size</FilterTitle>
                     <FilterSize>
@@ -138,21 +151,20 @@ const Product = () => {
                     </FilterSize>
                 </Filter>
             </FilterContainer>
-            <AddContainer>
+              <AddContainer>
                 <AmountContainer>
-                <Remove />
-                <Amount>1</Amount>
-                <Add />
+                  <Remove  />
+                  <Amount>{1}</Amount>
+                  <Add  />
                 </AmountContainer>
                 <Button>ADD TO CART</Button>
+              </AddContainer>
+            </InfoContainer>
+          </Wrapper>
+          <Newsletter />
+          <Footer />
+        </Container>
+      );
+    };
 
-            </AddContainer>
-        </InfoContainer>
-    </Wrapper>
-    <Newsletter />
-    <Footer />
-    </Container>
-  )
-}
-
-export default Product
+    export default Product;

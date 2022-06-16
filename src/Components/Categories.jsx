@@ -12,6 +12,7 @@ const Container = styled.div`
   justify-content: space-between;
   ${mobile({ padding: "0px", flexDirection:"column" })};
   background-color: white;
+  margin-bottom: 0px;
   
 
 
