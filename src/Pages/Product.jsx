@@ -109,7 +109,7 @@ const Product = () => {
     const location = useLocation();
     const id = location.pathname.split("/")[2];
 
-    const [product, setProduct] = useState({});
+    const [product, setProduct] = useState([]);
 
     useEffect(()=>{
         const getProduct = async()=> {
@@ -135,9 +135,11 @@ const Product = () => {
               <FilterContainer>
               <Filter>
                     <FilterTitle>Color</FilterTitle>
-                    {product.color.map((c) => (
-                  <FilterColor color={c} key={c} />
-              ))}
+                    {product.color ? product.color.map((c)=> (
+                      <FilterColor color = {c} key={c}/>
+
+                    )) : "loding..."}
+                    
                 </Filter>
                 <Filter>
                     <FilterTitle>Size</FilterTitle>
