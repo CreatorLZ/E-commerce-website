@@ -6,10 +6,11 @@ import Login from './Pages/Login';
 import Product from './Pages/Product';
 import Register from './Pages/Register';
 import Cart from './Pages/Cart';
+import { useSelector } from 'react-redux';
 
 
 const App = () => {
-  const user = null;
+  const user = useSelector((state)=> state.user.currentUser);
   return (
     <Routes>
     <Route path="/" exact={true} element={<Home />} />
