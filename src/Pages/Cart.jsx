@@ -118,7 +118,7 @@ font-size: 24px;
 margin: 5px;
 `;
 
-const ProductPrice = styled.div`
+const ProductPrice = styled.span`
 font-size: 30px;
 font-weight: 200;
 `;
@@ -178,14 +178,16 @@ const Cart = () => {
             <Info>
               {cart.products.map(product=>(
 
-                <Product>
+                <Product key={cart}>
                 <ProductDetail>
                   <Image src= {product.img} />
                   <Details>
                     <ProductName><b>Product:</b> {product.title}</ProductName>
                     <ProductId><b>ID:</b>{product._id}</ProductId>
                     <ProductColor color={product.color} />
-                    <ProductSize><b>Size:</b> {product.size}</ProductSize>
+                    <ProductSize>
+                      <b>Size:</b> {product.size}
+                      </ProductSize>
 
                   </Details>
                 </ProductDetail>
@@ -195,7 +197,7 @@ const Cart = () => {
                     <ProductAmount>{product.quantity}</ProductAmount>
                     <Remove />
                   </ProductAmountContainer>
-                  <ProductPrice><span>&#8358;</span>{product.price* product.quantity}</ProductPrice>
+                  <ProductPrice><span>&#8358;</span>{product.price * product.quantity}</ProductPrice>
                 </PriceDetail>
               </Product>
                 ))}
