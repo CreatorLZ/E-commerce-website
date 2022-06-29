@@ -23,10 +23,11 @@ align-items: center;
 
 `
 
-const Left = styled.div`
+const Left = styled(Link)`
 flex: 1;
 justify-content: flex-end;
-margin: 10px;
+margin-left: 10px;
+text-decoration: none;
 `;
 
 const Language = styled.span`
@@ -79,6 +80,7 @@ font-size: 14px;
 cursor: pointer;
 margin-left: 25px;
 font-weight: 500;
+color: white;
 
 `
 
@@ -88,6 +90,7 @@ font-weight: bold ;
 font-size: 280%;
 color: white;
 margin-right: 100px;
+text-decoration: none;
 `
 
 const Button = styled.button`
@@ -102,6 +105,10 @@ margin-left: 3px;
 border-radius: 5px;
 
 `
+const Register = styled(Link)`
+text-decoration: none;
+color: white;
+`;
 
 
 const Navbar = () => {
@@ -112,19 +119,25 @@ const Navbar = () => {
   return (
     <Container>
      <Wrapper>
-     <Left>
+    
+     <Left Link to = "/">
      <Logo>Across <StoreRounded style={{margin: "none"}} /> </Logo>
        </Left>
+       
      <Center><Language>EN</Language>
        <SearchContainer>
        <Input placeholder='Search products, brands, and categories ' />
        </SearchContainer>
        <Button>Search</Button>
        </Center>
-       
-     <Right>
+       <Right>
+     <Register Link to = "/register">
        <MenuItem> <HowToRegOutlined style={{fontSize: "large"}} /> REGISTER</MenuItem>
+      </Register>
+       <Register Link to = "/login">
        <MenuItem> <PersonOutline style={{fontSize: "large"}} /> SIGN IN</MenuItem>
+       </Register>
+     
        <Link to = "/cart">
        <MenuItem>
        <Badge badgeContent={quantity} color="primary">

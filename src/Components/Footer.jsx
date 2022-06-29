@@ -74,10 +74,7 @@ const Footer = () => {
     <Container>
       <Left>
       <Logo>Across <StoreRounded /> </Logo>
-        <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Quae facilis saepe beatae, assumenda numquam officia perferendis do
-             loribus atque quisquam, magni natus incidunt temporibus nulla repudianda
-             e. Illo dolorum dignissimos eos placeat.</Desc>
+        <Desc>We are dedicated to providing you the best services and products wherever and whenever you need</Desc>
         <SocialContainer>
             <SocialIcon  color='3B5999'>
                 <Facebook />

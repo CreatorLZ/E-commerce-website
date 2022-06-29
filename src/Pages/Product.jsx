@@ -56,6 +56,7 @@ align-items: center;
 const FilterTitle = styled.span`
 font-size: 20px;
 font-weight: 200;
+border-radius: 15px;
 `
 const FilterColor = styled.div`
 width: 20px;
@@ -155,7 +156,7 @@ const Product = () => {
               <Price>&#8358;{product.price}</Price>
               <FilterContainer>
               <Filter>
-                    <FilterTitle>Color</FilterTitle>
+                    <FilterTitle style={{backgroundColor:color}}>Color</FilterTitle>
                     {product.color ? product.color.map((c)=> (
                       <FilterColor color={c} key={c} onClick={()=> setColor(c)}/>
 

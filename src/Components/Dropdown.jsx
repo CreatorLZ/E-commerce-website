@@ -1,9 +1,16 @@
 import React from 'react'
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import { CloseRounded,HomeRounded, ArrowDropDownOutlined, ArrowUpDownOutlined, ShoppingCart, Reorder, CloseOutlined  } from "@material-ui/icons";
+import { useState } from 'react';
+import {SidebarData, sidebarData} from './SidebarData'
+import SubMenu from './SubMenu';
+
 
 const Container = styled.div`
-background-color: #213766;
-height: 30px;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 `;
 
 const Wrapper = styled.div`
@@ -11,6 +18,8 @@ display: flex;
 justify-content: space-between;
 color: white;
 align-items: center;
+background-color:  #04215e;
+height: 40px;
 `;
 
 
@@ -20,39 +29,62 @@ justify-content: flex-end;
 margin: 10px;
 `;
 
-const Navigation = styled.span`
-
+const Navigation = styled(Link)`
+margin-left: 1rem;
+color: white;
+font-size: 2rem;
+height: 80px;
+display: flex;
+justify-content: flex-start;
+align-items: center;
 `;
 
-const Center = styled.div`
-flex: 1;
+const SidebarNav = styled.nav`
+background: #001747;
+width: 250px;
+height: 100vh;
 display: flex;
-align-items: center;
-margin-top: 5px;
 justify-content: center;
-`;
+position: fixed;
+top: 0;
+left: ${({sidebar}) => (sidebar ? '0' : '-100%')};
+transition: 350ms;
+z-index: 10;
+`
+const SidebarWrap= styled.div`
+width: 100%;
+`
 
 
-const Right = styled.div`
-flex: 1;
-display: flex;
-align-items: center;
-justify-content: flex-end;
-`;
+
 
 
 
 const Dropdown = () => {
+const [sidebar, setSidebar] = useState(false);
+
+const showSidebar = () => setSidebar(!sidebar);
+
   return (
     <Container>
         <Wrapper>
       <Left>
-          <Navigation>LEFT
+          <Navigation to='#'>
+            <Reorder onClick={showSidebar}/> 
           </Navigation>
           </Left>
-      <Center>Super Deal! Free Shipping On Orders Over N5000</Center>
-      <Right>Right</Right>
         </Wrapper>
+        <SidebarNav sidebar={sidebar}>
+          <SidebarWrap>
+          <Navigation to='#'>
+            <CloseOutlined onClick={showSidebar}/> 
+          </Navigation>
+          {SidebarData.map((item, index) => {
+            return <SubMenu item={item} key = {index} />
+          })}
+          </SidebarWrap>
+        </SidebarNav>
+        
     </Container>
   )
 }
