@@ -1,7 +1,7 @@
 {
   "main.css": "/NEW-APP/static/css/main.d02f89db.chunk.css",
-  "main.js": "/NEW-APP/static/js/main.74b3a6a2.chunk.js",
-  "main.js.map": "/NEW-APP/static/js/main.74b3a6a2.chunk.js.map",
+  "main.js": "/NEW-APP/static/js/main.b90155cb.chunk.js",
+  "main.js.map": "/NEW-APP/static/js/main.b90155cb.chunk.js.map",
   "runtime~main.js": "/NEW-APP/static/js/runtime~main.4cee6653.js",
   "runtime~main.js.map": "/NEW-APP/static/js/runtime~main.4cee6653.js.map",
   "static/js/2.c483d079.chunk.js": "/NEW-APP/static/js/2.c483d079.chunk.js",
@@ -9,7 +9,7 @@
   "static/js/3.af919cd0.chunk.js": "/NEW-APP/static/js/3.af919cd0.chunk.js",
   "static/js/3.af919cd0.chunk.js.map": "/NEW-APP/static/js/3.af919cd0.chunk.js.map",
   "index.html": "/NEW-APP/index.html",
-  "precache-manifest.6edb9c45763d38dee3daf84e75966352.js": "/NEW-APP/precache-manifest.6edb9c45763d38dee3daf84e75966352.js",
+  "precache-manifest.d1c445e3ea7120ce62aa8406df2b1454.js": "/NEW-APP/precache-manifest.d1c445e3ea7120ce62aa8406df2b1454.js",
   "service-worker.js": "/NEW-APP/service-worker.js",
   "static/css/main.d02f89db.chunk.css.map": "/NEW-APP/static/css/main.d02f89db.chunk.css.map"
 }
