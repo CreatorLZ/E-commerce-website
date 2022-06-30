@@ -1,16 +1,15 @@
 {
-  "files": {
-    "main.css": "/NEW-APP/static/css/main.073c9b0a.css",
-    "main.js": "/NEW-APP/static/js/main.52bea898.js",
-    "static/js/787.a86f3764.chunk.js": "/NEW-APP/static/js/787.a86f3764.chunk.js",
-    "static/media/logo.svg": "/NEW-APP/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/NEW-APP/index.html",
-    "main.073c9b0a.css.map": "/NEW-APP/static/css/main.073c9b0a.css.map",
-    "main.52bea898.js.map": "/NEW-APP/static/js/main.52bea898.js.map",
-    "787.a86f3764.chunk.js.map": "/NEW-APP/static/js/787.a86f3764.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.52bea898.js"
-  ]
+  "main.css": "/NEW-APP/static/css/main.d02f89db.chunk.css",
+  "main.js": "/NEW-APP/static/js/main.983cdc12.chunk.js",
+  "main.js.map": "/NEW-APP/static/js/main.983cdc12.chunk.js.map",
+  "runtime~main.js": "/NEW-APP/static/js/runtime~main.4cee6653.js",
+  "runtime~main.js.map": "/NEW-APP/static/js/runtime~main.4cee6653.js.map",
+  "static/js/2.c483d079.chunk.js": "/NEW-APP/static/js/2.c483d079.chunk.js",
+  "static/js/2.c483d079.chunk.js.map": "/NEW-APP/static/js/2.c483d079.chunk.js.map",
+  "static/js/3.af919cd0.chunk.js": "/NEW-APP/static/js/3.af919cd0.chunk.js",
+  "static/js/3.af919cd0.chunk.js.map": "/NEW-APP/static/js/3.af919cd0.chunk.js.map",
+  "index.html": "/NEW-APP/index.html",
+  "precache-manifest.6b162dd02960e73f2fbc14a73ab6084a.js": "/NEW-APP/precache-manifest.6b162dd02960e73f2fbc14a73ab6084a.js",
+  "service-worker.js": "/NEW-APP/service-worker.js",
+  "static/css/main.d02f89db.chunk.css.map": "/NEW-APP/static/css/main.d02f89db.chunk.css.map"
 }
