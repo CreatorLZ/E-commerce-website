@@ -5,19 +5,19 @@ import { ArrowDropDownOutlined, ArrowDropUpOutlined, CategoryOutlined,  CloseRou
 export const SidebarData = [
     {
         title: "Account",
-        path: '#',
+        path: '/',
         icon: <PermIdentityOutlined />,
         iconClosed: <ArrowDropDownOutlined/>,
         iconOpened: <ArrowDropUpOutlined/>,
         subNav: [
             {
                 title: "Sign-In",
-                path: '/login',
+                path: '#',
                 icon: <FaceRounded />,
             },
             {
                 title: "Sign-Up",
-                path: '/register',
+                path: '#',
                 icon: <PermIdentityRounded />,
             },
         ]
@@ -31,22 +31,22 @@ export const SidebarData = [
         subNav: [
             {
                 title: "Men",
-                path: "/products/men",
+                path: "products/men",
                 
             },
             {
                 title: "Women",
-                path: '/products/women',
+                path: 'products/women',
                 
             },
             {
                 title: "Kitchen",
-                path:"/products/kitchen" 
+                path:"products/kitchen" 
                 
             },
             {
                 title: "Gaming",
-                path: '/products/gaming',
+                path: 'products/gaming',
                 
             },
         ]
@@ -54,7 +54,7 @@ export const SidebarData = [
 
     {
         title: 'Cart',
-        path: "/cart",
+        path: '#',
         icon: <ShoppingCart />,
     },
     {
