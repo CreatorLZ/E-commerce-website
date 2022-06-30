@@ -5,7 +5,6 @@ import { ArrowDropDownOutlined, ArrowDropUpOutlined, CategoryOutlined,  CloseRou
 export const SidebarData = [
     {
         title: "Account",
-        path: '/',
         icon: <PermIdentityOutlined />,
         iconClosed: <ArrowDropDownOutlined/>,
         iconOpened: <ArrowDropUpOutlined/>,
@@ -24,7 +23,6 @@ export const SidebarData = [
     },
     {
         title: "Categories",
-        path: '/',
         icon: <CategoryOutlined />,
         iconClosed: <ArrowDropDownOutlined />,
         iconOpened: <ArrowDropUpOutlined />,
@@ -54,7 +52,7 @@ export const SidebarData = [
 
     {
         title: 'Cart',
-        path: 'cart',
+        path: "cart",
         icon: <ShoppingCart />,
     },
     {
