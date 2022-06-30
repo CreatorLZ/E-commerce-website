@@ -5,7 +5,7 @@ import { ArrowDropDownOutlined, ArrowDropUpOutlined, CategoryOutlined,  CloseRou
 export const SidebarData = [
     {
         title: "Account",
-        path: '/',
+        path: '#',
         icon: <PermIdentityOutlined />,
         iconClosed: <ArrowDropDownOutlined/>,
         iconOpened: <ArrowDropUpOutlined/>,
