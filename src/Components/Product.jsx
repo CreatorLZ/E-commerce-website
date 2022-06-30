@@ -76,7 +76,7 @@ transition: all 0.5s ease;
 
 const Product = ({item}) => {
   return (
-    <Container>
+    <Container >
     <Circle />
       <Image src={item.img}/>
       <Info>
@@ -89,7 +89,7 @@ const Product = ({item}) => {
             </Link>
           </Icon>
           <Icon>
-              <FavoriteBorderOutlined/>
+              <FavoriteBorderOutlined />
           </Icon>
       </Info>
     </Container>

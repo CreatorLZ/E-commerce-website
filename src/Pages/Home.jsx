@@ -21,7 +21,7 @@ const Home = () => {
       <Container>
      <Navbar />
      <Dropdown />
-     <Slider />
+     <Slider/>
      <Categories />
      <SecondCategories />
      <Trends />

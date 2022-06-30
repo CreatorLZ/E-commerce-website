@@ -23,6 +23,7 @@
         "web-vitals": "^2.1.4"
     },
     "devDependencies": {
+        "gh-pages": "^4.0.0",
         "nan": "^2.15.0",
         "react-scripts": "^2.1.8"
     },
