@@ -1,3 +1,4 @@
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -34,8 +35,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
-const Port = process.env.PORT || 5000;
 
-app.listen(Port, () => {
-  console.log("Backend server is running!" + Port);
+
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Backend server is running!" );
 });
