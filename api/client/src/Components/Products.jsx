@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import axios from 'axios';
+>>>>>>> b70c45f44ed9cbd06b2bed2a06eab9f8a10910b6
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { axiosInstance } from '../config';
@@ -45,7 +49,11 @@ const Products = ({cat,filters,sort}) => {
   useEffect(()=>{
     const getProducts = async ()=>{
       try{
+<<<<<<< HEAD
         const res = await axiosInstance.get(cat ? `https://acrossshop.herokuapp.com/api/products?category=${cat}` : "https://acrossshop.herokuapp.com/api/products");
+=======
+        const res = await axiosInstance.get(cat ? `http://localhost:5000/api/products?category=${cat}` : "http://localhost:5000/api/products");
+>>>>>>> b70c45f44ed9cbd06b2bed2a06eab9f8a10910b6
        setProducts(res.data)
       }catch(err){
         
