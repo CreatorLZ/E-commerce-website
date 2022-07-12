@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd api && npm install && npm run build"
+    "heroku-postbuild": "cd iii && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
