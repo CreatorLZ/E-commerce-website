@@ -5,7 +5,6 @@ import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
 import { Add, Remove } from '@material-ui/icons'
 import { useLocation } from 'react-router-dom'
-import axios from 'axios';
 import { addProduct } from '../redux/cartRedux'
 import { useDispatch } from 'react-redux'
 import { mobile } from '../responsive'
