@@ -1,6 +1,7 @@
 import axios from "axios";
+import { axiosInstance } from "./config";
 
-const BASE_URL = "http://localhost:5000/api/";
+const BASE_URL = "https://acrossshop.herokuapp.com/api/";
 // const TOKEN =
 //   JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser
 //     .accessToken || "";
@@ -13,7 +14,7 @@ export const publicRequest = axios.create({
   baseURL: BASE_URL,
 });
 
-export const userRequest = axios.create({
+export const userRequest = axiosInstance.create({
   baseURL: BASE_URL,
   header: { token: `Bearer ${TOKEN}` },
 });
