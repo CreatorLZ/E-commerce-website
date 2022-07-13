@@ -5,10 +5,7 @@ import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
 import { Add, Remove } from '@material-ui/icons'
 import { useLocation } from 'react-router-dom'
-<<<<<<< HEAD
-=======
 import axios from 'axios';
->>>>>>> b70c45f44ed9cbd06b2bed2a06eab9f8a10910b6
 import { addProduct } from '../redux/cartRedux'
 import { useDispatch } from 'react-redux'
 import { mobile } from '../responsive'
@@ -130,11 +127,7 @@ const Product = () => {
     useEffect(()=>{
         const getProduct = async()=> {
             try{
-<<<<<<< HEAD
-                const res = await axiosInstance.get("https://acrossshop.herokuapp.com/api/products/find/"+ id);
-=======
-                const res = await axiosInstance.get("http://localhost:5000/api/products/find/"+ id);
->>>>>>> b70c45f44ed9cbd06b2bed2a06eab9f8a10910b6
+                const res = await axios.get("http://localhost:5000/api/products/find/"+ id);
                 setProduct(res.data);
             }catch{} 
               

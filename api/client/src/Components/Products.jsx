@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { axiosInstance } from '../config';
@@ -44,7 +45,7 @@ const Products = ({cat,filters,sort}) => {
   useEffect(()=>{
     const getProducts = async ()=>{
       try{
-        const res = await axiosInstance.get(cat ? `https://acrossshop.herokuapp.com/api/products?category=${cat}` : "https://acrossshop.herokuapp.com/api/products");
+        const res = await axios.get(cat ? `http://localhost:5000/api/products?category=${cat}` : "http://localhost:5000/api/products");
        setProducts(res.data)
       }catch(err){
         
