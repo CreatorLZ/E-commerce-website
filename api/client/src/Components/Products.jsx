@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { axiosInstance } from '../config';
+
 import {popProducts} from "../data";
 import { mobile } from '../responsive';
 import Product from './Product';
@@ -45,7 +46,7 @@ const Products = ({cat,filters,sort}) => {
   useEffect(()=>{
     const getProducts = async ()=>{
       try{
-        const res = await axios.get(cat ? `http://localhost:5000/api/products?category=${cat}` : "http://localhost:5000/api/products");
+        const res = await axiosInstance.get(cat ? `http://localhost:5000/api/products?category=${cat}` : "http://localhost:5000/api/products");
        setProducts(res.data)
       }catch(err){
         

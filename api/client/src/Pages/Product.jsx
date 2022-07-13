@@ -9,7 +9,7 @@ import axios from 'axios';
 import { addProduct } from '../redux/cartRedux'
 import { useDispatch } from 'react-redux'
 import { mobile } from '../responsive'
-import { axiosInstance } from '../config'
+import { axiosInstance } from '../config';
 
 
 
@@ -127,7 +127,7 @@ const Product = () => {
     useEffect(()=>{
         const getProduct = async()=> {
             try{
-                const res = await axios.get("http://localhost:5000/api/products/find/"+ id);
+                const res = await axiosInstance.get("http://localhost:5000/api/products/find/"+ id);
                 setProduct(res.data);
             }catch{} 
               
